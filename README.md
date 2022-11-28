@@ -1,21 +1,21 @@
-## Encontrando Professores
+# Encontrando Professores
 
 Este projeto é referente ao desafio da segunda etapa do programa de estágio da da MB Labs
 
-### Descrição:
+## Descrição:
 
 Sistema que possibilita alunos de encontrarem professores de qualquer matéria e se tornar aluno do professor que quiser.
 
-### Histórias de Usuário:
+## Histórias de Usuário:
 
-#### Professor:
+### Professor:
 
     01 - Como professor, eu quero criar uma conta                                              - A Fazer
     02 - Como professor, eu quero editar minhas informações                                    - A Fazer
     03 - Como professor, eu quero recuperar minhas informações pessoais para ver no meu perfil - A Fazer
     04 - Como professor, eu quero listar todos os meus alunos                                  - A Fazer
 
-#### Aluno:
+### Aluno:
 
     01 - Como aluno, eu quero criar uma conta                                              - A Fazer
     02 - Como aluno, eu quero editar minhas informações                                    - A Fazer
