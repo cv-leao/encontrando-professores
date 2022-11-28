@@ -4,7 +4,7 @@ Este projeto é referente ao desafio da segunda etapa do programa de estágio da
 
 ## Descrição:
 
-Sistema que possibilita alunos de encontrarem professores de qualquer matéria e se tornar aluno do professor que quiser.
+Sistema que possibilita alunos de encontrarem professores de qualquer matéria(desde que tenha algum professor que ministre aula da matéria) e se tornar aluno do professor que quiser.
 
 ## Tabelas e Atributos:
 
