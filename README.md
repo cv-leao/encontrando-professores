@@ -6,6 +6,33 @@ Este projeto é referente ao desafio da segunda etapa do programa de estágio da
 
 Sistema que possibilita alunos de encontrarem professores de qualquer matéria e se tornar aluno do professor que quiser.
 
+## Tabelas e Atributos:
+
+### teachers
+
+    id
+    name
+    email
+    password
+    matter
+    id_students_of_a_teacher
+
+id_students_of_a_teacher -> Chave estrangeira
+
+### students
+
+    id
+    name
+    email
+    password
+
+### students_of_a_teacher
+
+    id
+    id_students
+
+id_students -> Chave estrangeira
+
 ## Histórias de Usuário:
 
 ### Professor:
