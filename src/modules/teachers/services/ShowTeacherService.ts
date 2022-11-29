@@ -7,7 +7,7 @@ interface ITeacherToShow {
 
 type ShowTeacher = Omit<Teachers, "password">;
 
-class ShowUserService {
+class ShowTeacherService {
   public async execute({ id }: ITeacherToShow): Promise<ShowTeacher> {
     const teacher = await prismaClient.teachers.findUnique({
       select: {
@@ -29,4 +29,4 @@ class ShowUserService {
   }
 }
 
-export default ShowUserService;
+export default ShowTeacherService;

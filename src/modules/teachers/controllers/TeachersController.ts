@@ -2,6 +2,7 @@ import { Request, Response } from "express";
 import { verify } from "jsonwebtoken";
 import AppError from "../../../shared/errors/AppError";
 import CreateTeacherService from "../services/CreateTeacherService";
+import ShowTeacherService from "../services/ShowTeacherService";
 import UpdateTeacherService from "../services/UpdateTeacherService";
 
 interface ITokenPayload {
@@ -56,6 +57,21 @@ export default class TeachersController {
     const updateTeacher = new UpdateTeacherService();
 
     const teacher = await updateTeacher.execute({ id, name }).catch((error) => {
+      response.statusCode = 400;
+      return error;
+    });
+
+    return response.json(teacher);
+  }
+
+  public async show(request: Request, response: Response): Promise<Response> {
+    const tokenInCookie = request.headers.cookie;
+
+    const id = idInToken(tokenInCookie as string);
+
+    const showTeacher = new ShowTeacherService();
+
+    const teacher = await showTeacher.execute({ id }).catch((error) => {
       response.statusCode = 400;
       return error;
     });
