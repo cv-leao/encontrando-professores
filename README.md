@@ -44,7 +44,7 @@ id_students -> Chave estrangeira
 
 ### Professor
 
-    01 - Como professor, eu quero criar uma conta                                              - A Fazer
+    01 - Como professor, eu quero criar uma conta                                              - Feito
     02 - Como professor, eu quero editar minhas informações                                    - A Fazer
     03 - Como professor, eu quero recuperar minhas informações pessoais para ver no meu perfil - A Fazer
     04 - Como professor, eu quero listar todos os meus alunos                                  - A Fazer
