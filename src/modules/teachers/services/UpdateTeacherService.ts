@@ -42,3 +42,5 @@ class UpdateTeacherService {
     return teacher;
   }
 }
+
+export default UpdateTeacherService;
