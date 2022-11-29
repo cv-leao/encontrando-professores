@@ -29,6 +29,14 @@ class CreateTeacherService {
     }
     /********************************************************************************/
 
+    if (name === "") {
+      throw new AppError("Nome inválido.");
+    }
+
+    if (matter === "") {
+      throw new AppError("Matéria inválida.");
+    }
+
     const emailExists = await prismaClient.teachers.findUnique({
       where: {
         email: email,

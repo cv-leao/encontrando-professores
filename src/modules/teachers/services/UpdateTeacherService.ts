@@ -14,6 +14,10 @@ class UpdateTeacherService {
     id,
     name,
   }: IteacherToUpdate): Promise<ITeacherUpdated> {
+    if (name === "") {
+      throw new AppError("Nome inválido.");
+    }
+
     const teacherExists = await prismaClient.teachers.findUnique({
       where: {
         id: id,
