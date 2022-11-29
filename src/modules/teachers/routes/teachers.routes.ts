@@ -7,5 +7,6 @@ const teachersController = new TeachersController();
 
 teachersRouter.post("/create", teachersController.create);
 teachersRouter.put("/update", isAuthenticated, teachersController.update);
+teachersRouter.get("/show", isAuthenticated, teachersController.show);
 
 export default teachersRouter;
