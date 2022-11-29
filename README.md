@@ -22,9 +22,6 @@ docker run --name NomeDaImagemASerCriada -e POSTGRES_PASSWORD=docker -p 5555:543
     email
     password
     matter
-    id_students_of_a_teacher
-
-id_students_of_a_teacher -> Chave estrangeira
 
 ### students
 
@@ -37,15 +34,14 @@ id_students_of_a_teacher -> Chave estrangeira
 
     id
     id_students
-
-id_students -> Chave estrangeira
+    id_teachers
 
 ## Histórias de Usuário:
 
 ### Professor
 
     01 - Como professor, eu quero criar uma conta                                              - Feito
-    02 - Como professor, eu quero fazer login em minha conta                                   - A Fazer
+    02 - Como professor, eu quero fazer login em minha conta                                   - Feito
     03 - Como professor, eu quero editar minhas informações                                    - A Fazer
     04 - Como professor, eu quero recuperar minhas informações pessoais para ver no meu perfil - A Fazer
     05 - Como professor, eu quero listar todos os meus alunos                                  - A Fazer
