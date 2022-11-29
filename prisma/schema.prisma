@@ -11,11 +11,12 @@ datasource db {
 }
 
 model Teachers {
-  id       String @id @unique @default(uuid())
-  name     String
-  email    String @unique
-  password String
-  matter   String
+  id                 String              @id @unique @default(uuid())
+  name               String
+  email              String              @unique
+  password           String
+  matter             String
+  StudentsOfATeacher StudentsOfATeacher?
 
   @@map("teachers")
 }
@@ -34,6 +35,8 @@ model StudentsOfATeacher {
   id          String   @id @unique @default(uuid())
   id_students String
   Students    Students @relation(fields: [id_students], references: [id])
+  id_teachers String   @unique
+  Teachers    Teachers @relation(fields: [id_teachers], references: [id])
 
   @@map("students_of_a_teacher")
 }
