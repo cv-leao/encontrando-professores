@@ -7,7 +7,7 @@ export default class TeachersController {
 
     const createTeacher = new CreateTeacherService();
 
-    const teacher = createTeacher
+    const teacher = await createTeacher
       .execute({
         name,
         email,

@@ -29,13 +29,15 @@ class CreateTeacherService {
     }
     /********************************************************************************/
 
-    const emailExists = prismaClient.teachers.findUnique({
+    const emailExists = await prismaClient.teachers.findUnique({
       where: {
         email: email,
       },
     });
 
-    if (!emailExists) {
+    const emailToIf = !!emailExists;
+
+    if (emailToIf) {
       throw new AppError("Email já utilizado.");
     }
 
@@ -51,7 +53,7 @@ class CreateTeacherService {
 
     const hashedPassword = await hash(password, 8);
 
-    const teacher = prismaClient.teachers.create({
+    const teacher = await prismaClient.teachers.create({
       select: {
         id: true,
         name: true,
