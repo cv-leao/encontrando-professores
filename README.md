@@ -43,7 +43,7 @@ docker run --name NomeDaImagemASerCriada -e POSTGRES_PASSWORD=docker -p 5555:543
     01 - Como professor, eu quero criar uma conta                                              - Feito
     02 - Como professor, eu quero fazer login em minha conta                                   - Feito
     03 - Como professor, eu quero editar minhas informações                                    - Feito
-    04 - Como professor, eu quero recuperar minhas informações pessoais para ver no meu perfil - A Fazer
+    04 - Como professor, eu quero recuperar minhas informações pessoais para ver no meu perfil - Feito
     05 - Como professor, eu quero listar todos os meus alunos                                  - A Fazer
 
 ### Aluno:
@@ -123,6 +123,22 @@ Obs: samePassword é a confirmação da senha.
     }
 
 Obs: Somente o nome do professor pode ser modificado.
+
+### Pegar as informações pessoais(professor):
+
+    Método HTTP: GET
+
+    Rota: /teachers/show
+
+    Sem entrada.
+
+    Saída(json):
+    {
+        "id": "6c1a2035-4dcf-4b8d-b816-7c448be1b647",
+        "name": "Carlos Victor",
+        "email": "exemplo@gmail.com",
+        "matter": "Nome da matéria"
+    }
 
 ##
 
