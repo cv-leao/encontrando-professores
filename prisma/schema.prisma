@@ -21,8 +21,19 @@ model Teachers {
 }
 
 model Students {
-  id       String @id @unique @default(uuid())
-  name     String
-  email    String @unique
-  password String
+  id                 String               @id @unique @default(uuid())
+  name               String
+  email              String               @unique
+  password           String
+  StudentsOfATeacher StudentsOfATeacher[]
+
+  @@map("students")
+}
+
+model StudentsOfATeacher {
+  id          String   @id @unique @default(uuid())
+  id_students String
+  Students    Students @relation(fields: [id_students], references: [id])
+
+  @@map("students_of_a_teacher")
 }
