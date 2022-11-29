@@ -8,7 +8,6 @@ interface IStudentToCreate {
   email: string;
   password: string;
   samePasswords: string;
-  matter: string;
 }
 
 type IStudentCreated = Omit<Students, "password">;
