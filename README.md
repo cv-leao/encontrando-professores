@@ -45,18 +45,20 @@ id_students -> Chave estrangeira
 ### Professor
 
     01 - Como professor, eu quero criar uma conta                                              - Feito
-    02 - Como professor, eu quero editar minhas informações                                    - A Fazer
-    03 - Como professor, eu quero recuperar minhas informações pessoais para ver no meu perfil - A Fazer
-    04 - Como professor, eu quero listar todos os meus alunos                                  - A Fazer
+    02 - Como professor, eu quero fazer login em minha conta                                   - A Fazer
+    03 - Como professor, eu quero editar minhas informações                                    - A Fazer
+    04 - Como professor, eu quero recuperar minhas informações pessoais para ver no meu perfil - A Fazer
+    05 - Como professor, eu quero listar todos os meus alunos                                  - A Fazer
 
 ### Aluno
 
     01 - Como aluno, eu quero criar uma conta                                              - A Fazer
-    02 - Como aluno, eu quero editar minhas informações                                    - A Fazer
-    03 - Como aluno, eu quero recuperar minhas informações pessoais para ver no meu perfil - A Fazer
-    04 - Como aluno, eu quero listar todos os meus professores                             - A Fazer
-    05 - Como aluno, eu quero pesquisar pelo nome dos professores                          - A fazer
-    06 - Como aluno, eu quero pesquisar por matéria                                        - A fazer
+    02 - Como aluno, eu quero fazer login em minha conta                                   - A Fazer
+    03 - Como aluno, eu quero editar minhas informações                                    - A Fazer
+    04 - Como aluno, eu quero recuperar minhas informações pessoais para ver no meu perfil - A Fazer
+    05 - Como aluno, eu quero listar todos os meus professores                             - A Fazer
+    06 - Como aluno, eu quero pesquisar pelo nome dos professores                          - A fazer
+    07 - Como aluno, eu quero pesquisar por matéria                                        - A fazer
 
 ## Utilização da API:
 
