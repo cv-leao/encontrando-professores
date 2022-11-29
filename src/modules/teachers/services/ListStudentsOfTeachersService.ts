@@ -26,6 +26,8 @@ class ListStudentsOfTeachersService {
       },
     });
 
+    console.log(!students);
+
     return students;
   }
 }
