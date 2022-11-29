@@ -57,3 +57,34 @@ id_students -> Chave estrangeira
     04 - Como aluno, eu quero listar todos os meus professores                             - A Fazer
     05 - Como aluno, eu quero pesquisar pelo nome dos professores                          - A fazer
     06 - Como aluno, eu quero pesquisar por matéria                                        - A fazer
+
+## Utilização da API:
+
+### Criar Teacher:
+
+    Método HTTP: POST
+
+    Rota: /teachers/create
+
+    Entrada(json):
+    {
+        "name": "Exemplo Nome",
+        "email": "exemplo@gmail.com",
+        "password": "123456",
+        "samePasswords": "123456",
+        "matter": "Nome da matéria"
+    }
+
+    Saída(json):
+    {
+        "id": "6c1a2035-4dcf-4b8d-b816-7c448be1b647",
+        "name": "Exemplo Nome",
+        "email": "exemplo@gmail.com",
+        "matter": "Nome da matéria"
+    }
+
+##
+
+##
+
+##
