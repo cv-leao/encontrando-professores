@@ -6,6 +6,13 @@ Este projeto é referente ao desafio da segunda etapa do programa de estágio da
 
 Sistema que possibilita alunos de encontrarem professores de qualquer matéria(desde que tenha algum professor que ministre aula da matéria) e se tornar aluno do professor que quiser.
 
+<!--
+## Tecnologias utilizadas:
+
+Docker
+docker run --name NomeDaImagemASerCriada -e POSTGRES_PASSWORD=docker -p 5555:5432 -d postgre
+-->
+
 ## Tabelas e Atributos:
 
 ### teachers
