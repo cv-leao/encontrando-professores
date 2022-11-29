@@ -2,6 +2,7 @@ import { Request, Response } from "express";
 import { verify } from "jsonwebtoken";
 import AppError from "../../../shared/errors/AppError";
 import CreateTeacherService from "../services/CreateTeacherService";
+import ListStudentsOfTeachersService from "../services/ListStudentsOfTeachersService";
 import ShowTeacherService from "../services/ShowTeacherService";
 import UpdateTeacherService from "../services/UpdateTeacherService";
 
@@ -77,5 +78,23 @@ export default class TeachersController {
     });
 
     return response.json(teacher);
+  }
+
+  public async listStudents(
+    request: Request,
+    response: Response
+  ): Promise<Response> {
+    const tokenInCookie = request.headers.cookie;
+
+    const id = idInToken(tokenInCookie as string);
+
+    const listStudents = new ListStudentsOfTeachersService();
+
+    const students = await listStudents.execute({ id }).catch((error) => {
+      response.statusCode = 400;
+      return error;
+    });
+
+    return response.json(students);
   }
 }
