@@ -10,6 +10,20 @@ interface ITokenPayload {
   sub: string;
 }
 
+const idInToken = (tokenInCookie: string) => {
+  if (!tokenInCookie) {
+    throw new AppError("O token está ausente.");
+  }
+
+  const token = tokenInCookie?.slice(6);
+
+  const decodedToken = verify(token, process.env.JWT_SECRET!);
+
+  const { sub } = decodedToken as ITokenPayload;
+
+  return sub;
+};
+
 export default class TeachersController {
   public async create(request: Request, response: Response): Promise<Response> {
     const { name, email, password, samePasswords, matter } = request.body;
@@ -35,17 +49,7 @@ export default class TeachersController {
   public async update(request: Request, response: Response): Promise<Response> {
     const tokenInCookie = request.headers.cookie;
 
-    if (!tokenInCookie) {
-      throw new AppError("O token está ausente.");
-    }
-
-    const token = tokenInCookie?.slice(6);
-
-    const decodedToken = verify(token, process.env.JWT_SECRET!);
-
-    const { sub } = decodedToken as ITokenPayload;
-
-    const id = sub;
+    const id = idInToken(tokenInCookie as string);
 
     const { name } = await request.body;
 
