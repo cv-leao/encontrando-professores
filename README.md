@@ -6,12 +6,15 @@ Este projeto é referente ao desafio da segunda etapa para programa de estágio 
 
 Sistema que possibilita alunos de encontrarem professores de qualquer matéria(desde que tenha algum professor que ministre aula da matéria) e se tornar aluno do professor que quiser.
 
-<!--
-## Tecnologias utilizadas:
+## Tecnologias e Ferramentas utilizadas:
 
-Docker
-docker run --name NomeDaImagemASerCriada -e POSTGRES_PASSWORD=docker -p 5555:5432 -d postgre
--->
+[Node.js](https://nodejs.org/en/) - [TypeScript](https://www.typescriptlang.org/) - [Prisma](https://www.prisma.io/) - [Postgres](https://www.postgresql.org/) - [Docker](https://www.docker.com/) - [Visual Studio Code](https://code.visualstudio.com/) - [Insomnia](https://insomnia.rest/) - [pgAdmin 4](https://www.pgadmin.org/)
+
+Obs: O Docker foi utilizado localmenta para as dependências do Postgres
+
+### Criando uma imagem Docker para utilizar as dependências do Postgres:
+
+    docker run --name NomeDaImagemASerCriada -e POSTGRES_PASSWORD=docker -p 5555:5432 -d postgre
 
 ## Tabelas e Atributos:
 
