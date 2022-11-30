@@ -1,7 +1,7 @@
+import { Students } from "./../../../../node_modules/.prisma/client/index.d";
 import { prismaClient } from "../../../database/prismaClient";
 import AppError from "../../../shared/errors/AppError";
 import { hash } from "bcryptjs";
-import { Students } from "@prisma/client";
 
 interface IStudentToCreate {
   name: string;

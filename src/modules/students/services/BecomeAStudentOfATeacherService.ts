@@ -1,4 +1,4 @@
-import { StudentsOfATeacher } from "@prisma/client";
+import { StudentsOfATeacher } from "./../../../../node_modules/.prisma/client/index.d";
 import { prismaClient } from "../../../database/prismaClient";
 import AppError from "../../../shared/errors/AppError";
 
