@@ -60,7 +60,7 @@ Obs: O Docker foi utilizado localmenta para as dependências do Postgres
 
 ## Utilização da API:
 
-Crie um arquivo .env com base nas configurações que estão no arquivo .env.example
+Crie um arquivo .env com base nas configurações que estão no arquivo .env.example.
 
 ### Criar Professor:
 
