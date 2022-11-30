@@ -1,4 +1,3 @@
-import { StudentsOfATeacher, Teachers } from "@prisma/client";
 import { prismaClient } from "../../../database/prismaClient";
 import AppError from "../../../shared/errors/AppError";
 import { Students } from "./../../../../node_modules/.prisma/client/index.d";
@@ -10,8 +9,18 @@ interface ITeacher {
 type StudentsToList = Omit<Students, "password">;
 
 class ListStudentsOfTeachersService {
-  public async execute({ id }: ITeacher): Promise<any> {
-    const students = await prismaClient.studentsOfATeacher.findUnique({
+  public async execute({ id }: ITeacher): Promise<StudentsToList> {
+    const teacher = await prismaClient.teachers.findUnique({
+      where: {
+        id: id,
+      },
+    });
+
+    if (!teacher) {
+      throw new AppError("ID incorreto, este professor não existe.");
+    }
+
+    const students = await prismaClient.studentsOfATeacher.findMany({
       select: {
         Students: {
           select: {
@@ -25,8 +34,6 @@ class ListStudentsOfTeachersService {
         id_teachers: id,
       },
     });
-
-    console.log(!students);
 
     return students;
   }
