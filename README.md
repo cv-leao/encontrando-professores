@@ -1,4 +1,4 @@
-# Encontrando Professores
+# API - Encontrando Professores
 
 Este projeto é referente ao desafio da segunda etapa do programa de estágio da da MB Labs
 
@@ -51,7 +51,7 @@ docker run --name NomeDaImagemASerCriada -e POSTGRES_PASSWORD=docker -p 5555:543
     01 - Como aluno, eu quero criar uma conta                                              - Feito
     02 - Como aluno, eu quero fazer login em minha conta                                   - Feito
     03 - Como aluno, eu quero me tornar aluno de algum professor                           - Feito
-    04 - Como aluno, eu quero editar minhas informações                                    - A Fazer
+    04 - Como aluno, eu quero editar minhas informações                                    - Feito
     05 - Como aluno, eu quero recuperar minhas informações pessoais para ver no meu perfil - A Fazer
     06 - Como aluno, eu quero listar todos os meus professores                             - A Fazer
 
