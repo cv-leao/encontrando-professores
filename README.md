@@ -56,7 +56,7 @@ Obs: O Docker foi utilizado localmenta para as dependências do Postgres
     03 - Como aluno, eu quero me tornar aluno de algum professor                           - Feito
     04 - Como aluno, eu quero editar minhas informações                                    - Feito
     05 - Como aluno, eu quero recuperar minhas informações pessoais para ver no meu perfil - Feito
-    06 - Como aluno, eu quero listar todos os meus professores                             - A Fazer
+    06 - Como aluno, eu quero listar todos os meus professores                             - Feito
 
 ## Utilização da API:
 
@@ -266,3 +266,31 @@ Obs: Somente o nome do professor pode ser modificado.
         "name": "Exemplo",
         "email": "exemplo_student@gmail.com"
     }
+
+### Listar todos os professores de um único aluno:
+
+    Método HTTP: GET
+
+    Rota: /students/list/teachers
+
+    Sem entrada.
+
+    Saída(json):
+    [
+        {
+            "Teachers": {
+                "id": "...",
+                "name": "...",
+                "email": "...",
+                "matter": "..."
+            }
+        },
+        {
+            "Teachers": {
+                "id": "...",
+                "name": "...",
+                "email": "...",
+                "matter": "..."
+            }
+        }
+    ]
