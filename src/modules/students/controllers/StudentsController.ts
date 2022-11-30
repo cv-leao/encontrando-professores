@@ -3,6 +3,7 @@ import { verify } from "jsonwebtoken";
 import AppError from "../../../shared/errors/AppError";
 import BecomeAStudentOfATeacherService from "../services/BecomeAStudentOfATeacherService";
 import CreateStudentService from "../services/CreateStudentService";
+import ShowStudentService from "../services/ShowStudentService";
 import UpdateStudentService from "../services/UpdateStudentService";
 
 interface ITokenPayload {
@@ -78,6 +79,21 @@ export default class StudentsController {
     const updateStudent = new UpdateStudentService();
 
     const student = await updateStudent.execute({ id, name }).catch((error) => {
+      response.statusCode = 400;
+      return error;
+    });
+
+    return response.json(student);
+  }
+
+  public async show(request: Request, response: Response): Promise<Response> {
+    const tokenInCookie = request.headers.cookie;
+
+    const id = idInToken(tokenInCookie as string);
+
+    const showStudent = new ShowStudentService();
+
+    const student = await showStudent.execute({ id }).catch((error) => {
       response.statusCode = 400;
       return error;
     });
