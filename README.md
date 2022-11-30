@@ -62,6 +62,8 @@ Obs: O Docker foi utilizado localmenta para as dependências do Postgres
 
 Crie um arquivo .env com base nas configurações que estão no arquivo .env.example
 
+Para testar a API no insomnia, utilize o arquivo Insomnia_Encontrando-Professores.json, que está na raiz do projeto
+
 ### Criar Professor:
 
     Método HTTP: POST
