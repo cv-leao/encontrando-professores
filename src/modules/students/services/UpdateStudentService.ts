@@ -18,7 +18,7 @@ class UpdateStudentService {
       throw new AppError("Nome inválido.");
     }
 
-    const studentExists = await prismaClient.student.findUnique({
+    const studentExists = await prismaClient.students.findUnique({
       where: {
         id: id,
       },
