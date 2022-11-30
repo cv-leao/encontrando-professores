@@ -82,7 +82,7 @@ docker run --name NomeDaImagemASerCriada -e POSTGRES_PASSWORD=docker -p 5555:543
 
 Obs: samePassword é a confirmação da senha.
 
-### Criar Sessão do Professor:
+### Fazer login(professor):
 
     Método HTTP: POST
 
@@ -139,8 +139,110 @@ Obs: Somente o nome do professor pode ser modificado.
         "matter": "Nome da matéria"
     }
 
-##
+### Listar todos os alunos de um único professor:
+
+    Método HTTP: GET
+
+    Rota: /teachers/list/students
+
+    Sem entrada.
+
+    Saída(json):
+    [
+        {
+            "Students": {
+                "id": "...",
+                "name": "...",
+                "email": "..."
+            }
+        },
+        {
+            "Students": {
+                "id": "...",
+                "name": "...",
+                "email": "..."
+            }
+        }
+    ]
 
 ##
 
 ##
+
+##
+
+### Criar Aluno:
+
+    Método HTTP: POST
+
+    Rota: /students/create
+
+    Entrada(json):
+    {
+        "name": "Exemplo Nome",
+        "email": "exemplo_student@gmail.com",
+        "password": "123456",
+        "samePasswords": "123456"
+    }
+
+    Saída(json):
+    {
+        "id": "59a2a34e-7e09-4f01-b9ff-da421569920e",
+        "name": "Exemplo Nome",
+        "email": "exemplo_student@gmail.com"
+    }
+
+### Fazer login(aluno):
+
+    Método HTTP: POST
+
+    Rota: /students/session
+
+    Entrada(json):
+    {
+        "email": "exemplo_student@gmail.com",
+        "password": "123456"
+    }
+
+    Saída(json):
+    {
+        "id": "59a2a34e-7e09-4f01-b9ff-da421569920e",
+        "name": "Exemplo Nome",
+        "email": "exemplo_student@gmail.com"
+    }
+
+### Virar aluno de algum professor:
+
+    Método HTTP: POST
+
+    Rota: /students/becomeAStudent
+
+    Entrada(json):
+    {
+        "id_teacher": "46c0b3af-366b-4e48-8dad-5ede9475f352"
+    }
+
+    Saída(json):
+    {
+        "id": "cadd32a3-742f-456d-9026-12846942fb56",
+        "id_students": "59a2a34e-7e09-4f01-b9ff-da421569920e",
+        "id_teachers": "46c0b3af-366b-4e48-8dad-5ede9475f352"
+    }
+
+### Atualizar informações do Aluno:
+
+    Método HTTP: PUT
+
+    Rota: /students/update
+
+    Entrada(json):
+    {
+        "name": "Exemplo Update"
+    }
+
+    Saída(json):
+    {
+        "id": "59a2a34e-7e09-4f01-b9ff-da421569920e",
+        "name": "Exemplo Update",
+        "email": "exemplo_student@gmail.com"
+    }
