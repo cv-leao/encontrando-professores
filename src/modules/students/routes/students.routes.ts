@@ -11,5 +11,6 @@ studentsRouter.post(
   isAuthenticated,
   studentsController.becomeAStudentOfATeacher
 );
+studentsRouter.put("/update", isAuthenticated, studentsController.update);
 
 export default studentsRouter;
