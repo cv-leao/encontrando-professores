@@ -10,7 +10,7 @@ type TeachersToList = Omit<Teachers, "password">;
 
 class ListTeachersOfStudentsService {
   public async execute({ id }: IStudent): Promise<TeachersToList> {
-    const student = await prismaClient.teachers.findUnique({
+    const student = await prismaClient.students.findUnique({
       where: {
         id: id,
       },
