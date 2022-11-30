@@ -3,6 +3,7 @@ import { verify } from "jsonwebtoken";
 import AppError from "../../../shared/errors/AppError";
 import BecomeAStudentOfATeacherService from "../services/BecomeAStudentOfATeacherService";
 import CreateStudentService from "../services/CreateStudentService";
+import ListTeachersOfStudentsService from "../services/ListTeachersOfStudentsService";
 import ShowStudentService from "../services/ShowStudentService";
 import UpdateStudentService from "../services/UpdateStudentService";
 
@@ -99,5 +100,23 @@ export default class StudentsController {
     });
 
     return response.json(student);
+  }
+
+  public async listTeachers(
+    request: Request,
+    response: Response
+  ): Promise<Response> {
+    const tokenInCookie = request.headers.cookie;
+
+    const id = idInToken(tokenInCookie as string);
+
+    const listTeachers = new ListTeachersOfStudentsService();
+
+    const teachers = await listTeachers.execute({ id }).catch((error) => {
+      response.statusCode = 400;
+      return error;
+    });
+
+    return response.json(teachers);
   }
 }
