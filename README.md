@@ -44,7 +44,7 @@ docker run --name NomeDaImagemASerCriada -e POSTGRES_PASSWORD=docker -p 5555:543
     02 - Como professor, eu quero fazer login em minha conta                                   - Feito
     03 - Como professor, eu quero editar minhas informações                                    - Feito
     04 - Como professor, eu quero recuperar minhas informações pessoais para ver no meu perfil - Feito
-    05 - Como professor, eu quero listar todos os meus alunos                                  - A Fazer
+    05 - Como professor, eu quero listar todos os meus alunos                                  - Feito
 
 ### Aluno:
 
