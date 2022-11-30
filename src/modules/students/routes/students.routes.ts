@@ -13,5 +13,10 @@ studentsRouter.post(
 );
 studentsRouter.put("/update", isAuthenticated, studentsController.update);
 studentsRouter.get("/show", isAuthenticated, studentsController.show);
+studentsRouter.get(
+  "/list/teachers",
+  isAuthenticated,
+  studentsController.listTeachers
+);
 
 export default studentsRouter;
