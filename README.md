@@ -55,7 +55,7 @@ Obs: O Docker foi utilizado localmenta para as dependências do Postgres
     02 - Como aluno, eu quero fazer login em minha conta                                   - Feito
     03 - Como aluno, eu quero me tornar aluno de algum professor                           - Feito
     04 - Como aluno, eu quero editar minhas informações                                    - Feito
-    05 - Como aluno, eu quero recuperar minhas informações pessoais para ver no meu perfil - A Fazer
+    05 - Como aluno, eu quero recuperar minhas informações pessoais para ver no meu perfil - Feito
     06 - Como aluno, eu quero listar todos os meus professores                             - A Fazer
 
 ## Utilização da API:
@@ -249,5 +249,20 @@ Obs: Somente o nome do professor pode ser modificado.
     {
         "id": "59a2a34e-7e09-4f01-b9ff-da421569920e",
         "name": "Exemplo Update",
+        "email": "exemplo_student@gmail.com"
+    }
+
+### Pegar as informações pessoais(aluno):
+
+    Método HTTP: GET
+
+    Rota: /students/show
+
+    Sem entrada.
+
+    Saída(json):
+    {
+        "id": "59a2a34e-7e09-4f01-b9ff-da421569920e",
+        "name": "Exemplo",
         "email": "exemplo_student@gmail.com"
     }
