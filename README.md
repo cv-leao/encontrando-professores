@@ -1,6 +1,6 @@
 # API - Encontrando Professores
 
-Este projeto é referente ao desafio da segunda etapa do programa de estágio da da MB Labs
+Este projeto é referente ao desafio da segunda etapa para programa de estágio da MB Labs
 
 ## Descrição:
 
