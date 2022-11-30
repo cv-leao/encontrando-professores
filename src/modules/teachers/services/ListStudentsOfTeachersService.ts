@@ -17,7 +17,7 @@ class ListStudentsOfTeachersService {
     });
 
     if (!teacher) {
-      throw new AppError("ID incorreto, este professor não existe.");
+      throw new AppError("ID incorreto, este usuário não existe.");
     }
 
     const students = await prismaClient.studentsOfATeacher.findMany({
